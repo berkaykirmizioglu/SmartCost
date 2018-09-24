@@ -29,5 +29,11 @@ namespace SmartCost.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<SmartCost.Models.UnitType> UnitTypes { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCost.Models.MaterialType> MaterialTypes { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCost.Models.Material> Materials { get; set; }
     }
 }

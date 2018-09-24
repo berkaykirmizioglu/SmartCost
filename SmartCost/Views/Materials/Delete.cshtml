@@ -1,0 +1,97 @@
+﻿@model SmartCost.Models.Material
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Malzeme Silme</h2>
+
+<h3>Silmek istediğinizden emin misiniz ?</h3>
+<div>
+    <h4>Malzeme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thickness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thickness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriceOfUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriceOfUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Geri", "Index")
+        </div>
+    }
+</div>
